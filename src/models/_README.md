@@ -1,0 +1,1 @@
+The "models" folder is where classes or modules representing data structures, entities, or domain objects are stored. These classes often define the structure of the data used within the application. In the context of databases, these models might map to tables or documents.
