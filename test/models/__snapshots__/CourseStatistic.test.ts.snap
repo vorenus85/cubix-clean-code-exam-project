@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Course Statistic tests Happy paths should Course exits with all possible properties 1`] = `
+CourseStatistic {
+  "courseName": "Clean Code",
+  "lastAccessed": 2024-01-22T00:00:00.000Z,
+  "lecturesCompleted": 4,
+  "progress": 80,
+  "totalLectures": 6,
+}
+`;
+
+exports[`Course Statistic tests Happy paths should CourseStatistic exits with all possible properties 1`] = `
+CourseStatistic {
+  "courseName": "Clean Code",
+  "lastAccessed": 2024-01-22T00:00:00.000Z,
+  "lecturesCompleted": 4,
+  "progress": 80,
+  "totalLectures": 6,
+}
+`;

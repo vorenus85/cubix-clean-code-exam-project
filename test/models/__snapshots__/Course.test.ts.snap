@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Course tests: Happy paths should Course exits with all possible properties 1`] = `
+Course {
+  "costInHuf": 69900,
+  "courseName": "Clean Code",
+  "lengthInWeeks": 6,
+  "startDate": 2023-12-06T00:00:00.000Z,
+  "students": [],
+}
+`;

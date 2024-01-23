@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lecturer tests Happy paths should Lecturer exits with all possible properties 1`] = `
+Lecturer {
+  "assignedCourses": [
+    "React",
+  ],
+  "email": "joe@cocker.com",
+  "name": "Joe Cocker",
+}
+`;
