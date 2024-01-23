@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DbClient tests Happy paths should get Course Statistic by courseName 1`] = `
+CourseStatistic {
+  "courseName": "Clean Code",
+  "lastAccessed": 2024-03-01T00:00:00.000Z,
+  "lecturesCompleted": 4,
+  "progress": 80,
+  "totalLectures": 6,
+}
+`;
+
+exports[`DbClient tests Happy paths should get Course by courseName 1`] = `
+Course {
+  "costInHuf": 69900,
+  "courseName": "Clean Code",
+  "lengthInWeeks": 6,
+  "startDate": 2023-12-06T00:00:00.000Z,
+  "students": [],
+}
+`;
+
+exports[`DbClient tests Happy paths should get all Courses 1`] = `
+[
+  Course {
+    "costInHuf": 69900,
+    "courseName": "Clean Code",
+    "lengthInWeeks": 6,
+    "startDate": 2023-12-06T00:00:00.000Z,
+    "students": [],
+  },
+  Course {
+    "costInHuf": 175900,
+    "courseName": "React",
+    "lengthInWeeks": 10,
+    "startDate": 2023-12-07T00:00:00.000Z,
+    "students": [],
+  },
+]
+`;
+
+exports[`DbClient tests Happy paths should get all courses 1`] = `
+[
+  Course {
+    "costInHuf": 69900,
+    "courseName": "Clean Code",
+    "lengthInWeeks": 6,
+    "startDate": 2023-12-06T00:00:00.000Z,
+    "students": [],
+  },
+  Course {
+    "costInHuf": 175900,
+    "courseName": "React",
+    "lengthInWeeks": 10,
+    "startDate": 2023-12-07T00:00:00.000Z,
+    "students": [],
+  },
+]
+`;
+
+exports[`DbClient tests Happy paths should get course by name 1`] = `
+Course {
+  "costInHuf": 69900,
+  "courseName": "Clean Code",
+  "lengthInWeeks": 6,
+  "startDate": 2023-12-06T00:00:00.000Z,
+  "students": [],
+}
+`;
+
+exports[`DbClient tests should get Course Statistic by courseName 1`] = `
+CourseStatistic {
+  "courseName": "Clean Code",
+  "lastAccessed": 2024-03-01T00:00:00.000Z,
+  "lecturesCompleted": 4,
+  "progress": 80,
+  "totalLectures": 6,
+}
+`;
+
+exports[`DbClient tests should get Course by courseName 1`] = `
+Course {
+  "costInHuf": 69900,
+  "courseName": "Clean Code",
+  "lengthInWeeks": 6,
+  "startDate": 2023-12-06T00:00:00.000Z,
+  "students": [],
+}
+`;
+
+exports[`DbClient tests should get all courses 1`] = `
+[
+  Course {
+    "costInHuf": 69900,
+    "courseName": "Clean Code",
+    "lengthInWeeks": 6,
+    "startDate": 2023-12-06T00:00:00.000Z,
+    "students": [],
+  },
+  Course {
+    "costInHuf": 175900,
+    "courseName": "React",
+    "lengthInWeeks": 10,
+    "startDate": 2023-12-07T00:00:00.000Z,
+    "students": [],
+  },
+]
+`;
+
+exports[`DbClient tests should get course by name 1`] = `
+Course {
+  "costInHuf": 69900,
+  "courseName": "Clean Code",
+  "lengthInWeeks": 6,
+  "startDate": 2023-12-06T00:00:00.000Z,
+  "students": [],
+}
+`;
