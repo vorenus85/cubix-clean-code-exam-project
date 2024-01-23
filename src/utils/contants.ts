@@ -17,5 +17,5 @@ export const COURSE_STATISTIC_MSG = {
   LECTURE_COMPLETED_MUST_BE_POSITIVE:
     'Lectures completed must be positive number',
   PROGRESS_MUST_BE_POSITIVE: 'Progress must be positive number',
-  LAST_ACCESSED_MUST_DATE: 'SLast accessed must be Date',
+  LAST_ACCESSED_MUST_DATE: 'Last accessed must be Date',
 }

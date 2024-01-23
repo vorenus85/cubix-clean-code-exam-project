@@ -42,15 +42,15 @@ describe('Course tests:', () => {
 
   describe('Error paths', () => {
     test.each`
-      courseName    | startDate    | lengthInWeeks    | costInHuf    | invalidProperty    | errorMessage
-      ${''}         | ${startDate} | ${lengthInWeeks} | ${costInHuf} | ${'courseName'}    | ${COURSE_ERROR_MSG.COURSE_NAME_EMPTY}
-      ${courseName} | ${''}        | ${lengthInWeeks} | ${costInHuf} | ${'startDate'}     | ${COURSE_ERROR_MSG.START_DATE_MUST_DATE}
-      ${courseName} | ${startDate} | ${lengthInWeeks} | ${''}        | ${'costInHuf'}     | ${COURSE_ERROR_MSG.COST_IN_HUF_MUST_POSITIVE_NUMBER}
-      ${courseName} | ${startDate} | ${lengthInWeeks} | ${-9}        | ${'costInHuf'}     | ${COURSE_ERROR_MSG.COST_IN_HUF_MUST_POSITIVE_NUMBER}
-      ${courseName} | ${startDate} | ${''}            | ${costInHuf} | ${'lengthInWeeks'} | ${COURSE_ERROR_MSG.LENGTH_IN_WEEK_MUST_POSITIVE_NUMBER}
-      ${courseName} | ${startDate} | ${-9}            | ${costInHuf} | ${'lengthInWeeks'} | ${COURSE_ERROR_MSG.LENGTH_IN_WEEK_MUST_POSITIVE_NUMBER}
+      invalidValue | courseName    | startDate    | lengthInWeeks    | costInHuf    | invalidProperty    | errorMessage
+      ${''}        | ${''}         | ${startDate} | ${lengthInWeeks} | ${costInHuf} | ${'courseName'}    | ${COURSE_ERROR_MSG.COURSE_NAME_EMPTY}
+      ${''}        | ${courseName} | ${''}        | ${lengthInWeeks} | ${costInHuf} | ${'startDate'}     | ${COURSE_ERROR_MSG.START_DATE_MUST_DATE}
+      ${''}        | ${courseName} | ${startDate} | ${lengthInWeeks} | ${''}        | ${'costInHuf'}     | ${COURSE_ERROR_MSG.COST_IN_HUF_MUST_POSITIVE_NUMBER}
+      ${-9}        | ${courseName} | ${startDate} | ${lengthInWeeks} | ${-9}        | ${'costInHuf'}     | ${COURSE_ERROR_MSG.COST_IN_HUF_MUST_POSITIVE_NUMBER}
+      ${''}        | ${courseName} | ${startDate} | ${''}            | ${costInHuf} | ${'lengthInWeeks'} | ${COURSE_ERROR_MSG.LENGTH_IN_WEEK_MUST_POSITIVE_NUMBER}
+      ${-9}        | ${courseName} | ${startDate} | ${-9}            | ${costInHuf} | ${'lengthInWeeks'} | ${COURSE_ERROR_MSG.LENGTH_IN_WEEK_MUST_POSITIVE_NUMBER}
     `(
-      'should throw error because property of $invalidProperty is invalid',
+      `should throw error because property of $invalidProperty is invalid, value is: $invalidValue`,
       ({ courseName, startDate, lengthInWeeks, costInHuf, errorMessage }) => {
         const errorExpected = new Error(errorMessage)
 
