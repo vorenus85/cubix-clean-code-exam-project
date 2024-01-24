@@ -1,5 +1,5 @@
 import { CourseStatistic } from '../../src/models/CourseStatistic'
-import { COURSE_STATISTIC_MSG } from '../../src/utils/constants'
+import { COURSE_STATISTIC_MSG } from '../../src/utils/courseStaticMessages'
 import { CourseStatisticFixture } from '../fixtures'
 
 describe('Course Statistic tests', () => {

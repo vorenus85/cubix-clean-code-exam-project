@@ -1,8 +1,8 @@
 import { Course } from '../../src/models/Course'
 import { Student } from '../../src/models/Student'
-import { COURSE_ERROR_MSG } from '../../src/utils/constants'
+import { COURSE_ERROR_MSG } from '../../src/utils/courseErrorMessages'
 import { CourseFixture } from '../fixtures'
-import { mock, mockReset } from 'jest-mock-extended'
+import { mock } from 'jest-mock-extended'
 
 const mockStudent = mock<Student>()
 

@@ -1,5 +1,5 @@
 import { Lecturer } from '../../src/models/Lecturer'
-import { PERSON_ERROR_MSG } from '../../src/utils/constants'
+import { PERSON_ERROR_MSG } from '../../src/utils/personErrorMessages'
 import { LecturerFixture } from '../fixtures'
 
 describe('Lecturer tests', () => {
