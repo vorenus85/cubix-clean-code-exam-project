@@ -1,4 +1,4 @@
-import { COURSE_STATISTIC_MSG } from '../utils/contants'
+import { COURSE_STATISTIC_MSG } from '../utils/constants'
 
 export class CourseStatistic {
   constructor(

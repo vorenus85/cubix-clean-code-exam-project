@@ -1,4 +1,4 @@
-import { PERSON_ERROR_MSG } from '../utils/contants'
+import { PERSON_ERROR_MSG } from '../utils/constants'
 
 export abstract class Person {
   constructor(

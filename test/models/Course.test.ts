@@ -1,6 +1,6 @@
 import { Course } from '../../src/models/Course'
 import { Student } from '../../src/models/Student'
-import { COURSE_ERROR_MSG } from '../../src/utils/contants'
+import { COURSE_ERROR_MSG } from '../../src/utils/constants'
 import { CourseFixture } from '../fixtures'
 import { mock, mockReset } from 'jest-mock-extended'
 
@@ -54,9 +54,10 @@ describe('Course tests:', () => {
       ({ courseName, startDate, lengthInWeeks, costInHuf, errorMessage }) => {
         const errorExpected = new Error(errorMessage)
 
-        expect(
-          () => new Course(courseName, startDate, lengthInWeeks, costInHuf)
-        ).toThrow(errorExpected)
+        const actualResult = () =>
+          new Course(courseName, startDate, lengthInWeeks, costInHuf)
+
+        expect(() => actualResult()).toThrow(errorExpected)
       }
     )
   })

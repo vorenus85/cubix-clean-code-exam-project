@@ -1,5 +1,5 @@
 import { Student } from '../../src/models/Student'
-import { PERSON_ERROR_MSG } from '../../src/utils/contants'
+import { PERSON_ERROR_MSG } from '../../src/utils/constants'
 import { StudentFixture } from '../fixtures'
 
 describe('Student tests', () => {

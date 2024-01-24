@@ -1,4 +1,4 @@
-import { COURSE_ERROR_MSG } from '../utils/contants'
+import { COURSE_ERROR_MSG } from '../utils/constants'
 import { Student } from './Student'
 
 export class Course {

@@ -36,8 +36,8 @@ export class CourseService implements ICourseService {
 
     course.AddStudent(student)
 
-    await this.notificationService.SendNotifications(
-      `${student.GetName()}student was added to course.`
+    this.notificationService.SendNotifications(
+      `${student.GetName()} student was added to course.`
     )
   }
 

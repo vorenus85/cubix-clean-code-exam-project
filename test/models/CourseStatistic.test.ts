@@ -1,5 +1,5 @@
 import { CourseStatistic } from '../../src/models/CourseStatistic'
-import { COURSE_STATISTIC_MSG } from '../../src/utils/contants'
+import { COURSE_STATISTIC_MSG } from '../../src/utils/constants'
 import { CourseStatisticFixture } from '../fixtures'
 
 describe('Course Statistic tests', () => {
@@ -33,6 +33,7 @@ describe('Course Statistic tests', () => {
       expect(actualResult).toMatchSnapshot()
     })
   })
+
   describe('Error paths', () => {
     test.each`
       invalidValue    | courseName    | totalLectures    | lecturesCompleted    | progress    | lastAccessed    | invalidProperty        | errorMessage
@@ -57,16 +58,16 @@ describe('Course Statistic tests', () => {
       }) => {
         const errorExpected = new Error(errorMessage)
 
-        expect(
-          () =>
-            new CourseStatistic(
-              courseName,
-              totalLectures,
-              lecturesCompleted,
-              progress,
-              lastAccessed
-            )
-        ).toThrow(errorExpected)
+        const actualResult = () =>
+          new CourseStatistic(
+            courseName,
+            totalLectures,
+            lecturesCompleted,
+            progress,
+            lastAccessed
+          )
+
+        expect(() => actualResult()).toThrow(errorExpected)
       }
     )
   })
