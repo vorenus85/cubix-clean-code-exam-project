@@ -11,7 +11,7 @@ describe('FinancialApiClient tests', () => {
     financialApiClient = new FinancialApiClient()
   })
 
-  it('should Student order is payed', async () => {
+  it('should get order is payed', async () => {
     const actualResult = await financialApiClient.GetIsOrderPayed(mockedStudent)
 
     expect(actualResult).toBe(true)

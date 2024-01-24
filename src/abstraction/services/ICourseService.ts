@@ -1,1 +1,10 @@
-export interface ICourseService {}
+import { Course } from '../../models/Course'
+import { CourseStatistic } from '../../models/CourseStatistic'
+import { Student } from '../../models/Student'
+
+export interface ICourseService {
+  AddCourse(course: Course): Promise<void>
+  GetCourses(): Promise<Course[]>
+  AddStudentToCourse(student: Student, courseName: string): Promise<void>
+  GetCourseStatistics(courseName: string): Promise<CourseStatistic>
+}
