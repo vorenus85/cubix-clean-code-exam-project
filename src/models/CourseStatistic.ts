@@ -38,35 +38,40 @@ export class CourseStatistic {
   private SetCourseName(value: string) {
     if (!value || typeof value !== 'string') {
       throw new Error(COURSE_STATISTIC_MSG.COURSE_NAME_EMPTY)
+    } else {
+      this.courseName = value
     }
-    this.courseName = value
   }
 
   private SetTotalLectures(value: number) {
     if (!value || typeof value !== 'number' || value < 1) {
       throw new Error(COURSE_STATISTIC_MSG.TOTAL_LECTURE_MUST_BE_POSITIVE)
+    } else {
+      this.totalLectures = value
     }
-    this.totalLectures = value
   }
 
   private SetLecturesCompleted(value: number) {
     if (!value || typeof value !== 'number' || value < 1) {
       throw new Error(COURSE_STATISTIC_MSG.LECTURE_COMPLETED_MUST_BE_POSITIVE)
+    } else {
+      this.lecturesCompleted = value
     }
-    this.lecturesCompleted = value
   }
 
   private SetProgress(value: number) {
     if (!value || typeof value !== 'number' || value < 1) {
       throw new Error(COURSE_STATISTIC_MSG.PROGRESS_MUST_BE_POSITIVE)
+    } else {
+      this.progress = value
     }
-    this.progress = value
   }
 
   private SetLastAccessed(value: Date) {
     if (!value || !(value instanceof Date)) {
       throw new Error(COURSE_STATISTIC_MSG.LAST_ACCESSED_MUST_DATE)
+    } else {
+      this.lastAccessed = value
     }
-    this.lastAccessed = value
   }
 }

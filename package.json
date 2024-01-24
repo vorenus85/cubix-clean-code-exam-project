@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest --maxWorkers 2  --coverage --verbose --watch",
+    "test": "npx jest --maxWorkers 2  --coverage --verbose --watchAll",
     "format": "prettier --loglevel warn --write \"src/**/*.{jsx,js, ts}\"",
     "build": "npx tsc -p tsconfig.build.json",
     "plato": "plato -r -d report dist"
