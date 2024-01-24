@@ -121,5 +121,27 @@ describe('CourseService tests', () => {
         courseName
       )
     })
+
+    it('should throw error via add Student to Course because Student not paid Order', async () => {
+      // Arrange
+      const student = StudentFixture
+      const course = CourseFixture
+      const courseName = 'Clean Code'
+      const errorMessage = 'Course is not yet paid by Student.'
+      const expectedError = new Error(errorMessage)
+
+      mockedCourseRepository.GetCourseByName.mockResolvedValueOnce(course)
+      mockedPaymentService.GetIsOrderPayed.mockResolvedValueOnce(false)
+
+      // Assert
+      expect(() =>
+        courseService.AddStudentToCourse(student, courseName)
+      ).rejects.toThrow(expectedError)
+      expect(mockedCourseRepository.GetCourseByName).toHaveBeenCalledTimes(1)
+      expect(mockedCourseRepository.GetCourseByName).toHaveBeenCalledWith(
+        courseName
+      )
+      expect(mockedPaymentService.GetIsOrderPayed).toHaveBeenCalledTimes(0)
+    })
   })
 })
