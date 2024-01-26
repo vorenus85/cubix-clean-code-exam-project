@@ -1,7 +1,8 @@
+import { IMessageClient } from '../../src/abstraction/clients/IMessageClient'
 import { PushNotificationClient } from '../../src/clients/PushNotificationClient'
 
 describe('EmailClient test', () => {
-  let pushNotificationClient: PushNotificationClient
+  let pushNotificationClient: IMessageClient
 
   beforeEach(() => {
     pushNotificationClient = new PushNotificationClient()

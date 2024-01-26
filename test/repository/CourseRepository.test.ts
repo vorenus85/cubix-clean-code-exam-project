@@ -6,8 +6,9 @@ import { Student } from '../../src/models/Student'
 import { NetworkError } from '../../src/exceptions/NetworkError'
 import { NotFoundError } from '../../src/exceptions/NotFoundError'
 import { UnknownError } from '../../src/exceptions/UnknownError'
+import { IDbClient } from '../../src/abstraction/clients/IDbClient'
 
-const mockedDbClient = mock<DbClient>()
+const mockedDbClient = mock<IDbClient>()
 const mockedCourse = mock<Course>()
 const mockedStudent = mock<Student>()
 

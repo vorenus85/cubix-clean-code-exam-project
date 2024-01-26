@@ -2,9 +2,10 @@ import { DbClient } from '../../src/clients/DbClient'
 import { mock, mockReset } from 'jest-mock-extended'
 import { Course } from '../../src/models/Course'
 import { Student } from '../../src/models/Student'
+import { IDbClient } from '../../src/abstraction/clients/IDbClient'
 
 describe('DbClient tests', () => {
-  let dbClient: DbClient
+  let dbClient: IDbClient
   const mockedCourse = mock<Course>()
   const mockedStudent = mock<Student>()
 

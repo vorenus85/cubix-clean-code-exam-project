@@ -1,19 +1,18 @@
 import { mock, mockReset } from 'jest-mock-extended'
 import { CourseService } from '../../src/services/CourseService'
-import { PaymentService } from '../../src/services/PaymentService'
-import { NotificationService } from '../../src/services/NotificationService'
-import { CourseRepository } from '../../src/repository/CourseRepository'
-import { Course } from '../../src/models/Course'
-import { Student } from '../../src/models/Student'
 import { CourseFixture, StudentFixture } from '../fixtures'
 import { NotFoundError } from '../../src/exceptions/NotFoundError'
+import { ICourseRepository } from '../../src/abstraction/repository/ICourseRepository'
+import { IPaymentService } from '../../src/abstraction/services/IPaymentService'
+import { INotificationService } from '../../src/abstraction/services/INotificationService'
+import { ICourseService } from '../../src/abstraction/services/ICourseService'
 
-const mockedCourseRepository = mock<CourseRepository>()
-const mockedPaymentService = mock<PaymentService>()
-const mockedNotificationService = mock<NotificationService>()
+const mockedCourseRepository = mock<ICourseRepository>()
+const mockedPaymentService = mock<IPaymentService>()
+const mockedNotificationService = mock<INotificationService>()
 
 describe('CourseService tests', () => {
-  let courseService: CourseService
+  let courseService: ICourseService
 
   beforeEach(() => {
     mockReset(mockedCourseRepository)
@@ -30,7 +29,7 @@ describe('CourseService tests', () => {
   describe('Happy paths', () => {
     it('should add Course', async () => {
       // Arrange
-      const course = new Course('Clean Code', new Date('2023-12-06'), 6, 69900)
+      const course = CourseFixture
       mockedCourseRepository.AddCourse.mockImplementation()
 
       // Act
@@ -103,7 +102,6 @@ describe('CourseService tests', () => {
     it('should throw error via add Student to Course because Course not found', async () => {
       // Arrange
       const student = StudentFixture
-      const course = CourseFixture
       const courseName = 'Clean Code'
       const errorMessage = 'Course not found'
       const expectedError = new NotFoundError(errorMessage)

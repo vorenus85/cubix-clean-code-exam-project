@@ -1,3 +1,4 @@
+import { INotificationService } from '../../src/abstraction/services/INotificationService'
 import { EmailClient } from '../../src/clients/EmailClient'
 import { PushNotificationClient } from '../../src/clients/PushNotificationClient'
 import { NotificationService } from '../../src/services/NotificationService'
@@ -7,7 +8,7 @@ const mockedEmailClient = mock<EmailClient>()
 const mockedPushNotificationClient = mock<PushNotificationClient>()
 
 describe('NotificationService test', () => {
-  let notificationService: NotificationService
+  let notificationService: INotificationService
 
   beforeEach(() => {
     notificationService = new NotificationService(

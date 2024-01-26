@@ -1,7 +1,8 @@
+import { IMessageClient } from '../../src/abstraction/clients/IMessageClient'
 import { EmailClient } from '../../src/clients/EmailClient'
 
 describe('EmailClient test', () => {
-  let emailClient: EmailClient
+  let emailClient: IMessageClient
 
   beforeEach(() => {
     emailClient = new EmailClient()
